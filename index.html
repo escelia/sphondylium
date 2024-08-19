@@ -4,184 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tinos 2024</title>
-    <style>
-        body {
-    background-color: #e6f7ff; /* Very light blue */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-}
-
-.header {
-    width: 100%;
-    height: 300px;
-    background-image: url('images/tinos.jpg');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    text-align: center;
-    position: relative;
-}
-
-.header h1 {
-    font-size: 4em;
-    margin: 0;
-}
-
-.nav-links {
-    position: absolute;
-    bottom: 10px;
-    width: 100%;
-    text-align: center;
-}
-
-.nav-links a {
-    color: white;
-    margin: 0 15px;
-    text-decoration: none;
-    font-size: 1.2em;
-}
-
-.nav-links a:hover {
-    text-decoration: underline;
-}
-
-.participants, .schedule, .accomodation, .finances, .photos {
-    width: 80%;
-    max-width: 800px;
-    margin: 20px 0;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    text-align: center;
-}
-
-.participant {
-    display: inline-block;
-    margin: 0 15px;
-    font-size: 1.2em;
-}
-
-.participant .emoji {
-    display: block;
-    font-size: 2em;
-}
-
-.schedule ul, .finances ul {
-    list-style-type: none;
-    padding: 0;
-    text-align: left;
-    position: relative; /* Add this to position the arrow inside the box */
-}
-
-.schedule li {
-    margin: 10px 0;
-    padding: 10px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.finances li {
-    margin: 10px 0;
-    padding: 10px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-.schedule .sub-items, .finances .sub-items {
-    display: none;
-    margin-top: 10px;
-    padding-left: 20px;
-}
-
-.photos a {
-    color: #007bff;
-    text-decoration: none;
-}
-
-.photos a:hover {
-    text-decoration: underline;
-}
-
-.accomodation img {
-    width: 80%;
-    display: block;
-    margin: 0 auto;
-}
-
-.accomodation a {
-    display: block;
-    text-align: center;
-    margin-top: 10px;
-    color: #007bff;
-    text-decoration: none;
-}
-
-.accomodation a:hover {
-    text-decoration: underline;
-}
-
-.clickable-text {
-    display: inline-block;
-    margin-left: 10px;
-    padding: 2px 5px;
-    border: 1px solid #007bff;
-    color: white;
-    background-color: #007bff;
-    border-radius: 3px;
-    cursor: pointer;
-    text-decoration: none;
-}
-
-.clickable-text:hover {
-    background-color: #0056b3;
-    border-color: #0056b3;
-}
-
-.split-text {
-    color: green;
-    font-weight: bold;
-}
-.arrow {
-            position: absolute;
-            right: 10px;
-        }
-
-.clickable-image {
-    display: block;
-    position: relative;
-    text-align: center;
-    color: white;
-    text-decoration: none;
-    width: fit-content;
-    margin: auto;
-}
-
-.clickable-image img {
-    width: 100%; /* Adjust the width to make the image smaller */
-    border-radius: 10px;
-}
-
-.image-text {
-    background-color: #e6f7ff;
-    padding: 5px 10px;
-    border-radius: 5px;
-    margin-top: 10px;
-    display: inline-block;
-}
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="header">
@@ -192,6 +15,8 @@
             <a href="#accomodation">🏠 Airbnb</a>
             <a href="#finances">💰 Trip Expenses</a>
             <a href="#photos">📸 Photo Gallery</a>
+            <a href="#spotify">🎵 Beats</a>
+            <a href="#archive">📂 Archive</a>
         </div>
     </div>
     <div id="participants" class="participants">
@@ -264,6 +89,16 @@
     <div id="photos" class="photos">
         <h2>📸 Photo Gallery</h2>
         <p><a href="https://drive.google.com/drive/folders/1Pu2rNmAiXqqxhm0Z6HKOhNqhvC2gSdRI" target="_blank">View Photos</a></p>
+    </div>
+    <div id="spotify" class="spotify">
+        <h2>🎵 Beats</h2>
+        <a href="https://open.spotify.com/playlist/3zJczhsHZZoieJEebAKiDh?si=c9cc164c1abc4a0d" target="_blank">
+            <img src="images/spotify.jpg" alt="Listen to Spotify" style="width: 100%; max-width: 150px; border-radius: 10px;">
+        </a>
+    </div>
+    <div id="archive" class="archive">
+        <h2>📂 Archive</h2>
+        <p>[TBD] Add previous trips here</p>
     </div>
     <script>
         function toggleSubItems(element) {
