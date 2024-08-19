@@ -80,6 +80,7 @@
     list-style-type: none;
     padding: 0;
     text-align: left;
+    position: relative; /* Add this to position the arrow inside the box */
 }
 
 .schedule li {
@@ -153,6 +154,32 @@
     color: green;
     font-weight: bold;
 }
+.arrow {
+            position: absolute;
+            right: 10px;
+        }
+        .clickable-image {
+    display: block;
+    position: relative;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+}
+
+.clickable-image img {
+    width: 50%; /* Adjust the width to make the image smaller */
+    border-radius: 10px;
+}
+
+.image-text {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
     </style>
 </head>
 <body>
@@ -166,7 +193,7 @@
         </div>
     </div>
     <div id="participants" class="participants">
-        <h2>Participants</h2>
+        <h2>👅 Girlies</h2>
         <div class="participant">
             <div class="emoji">👩‍🔬</div>
             <div class="name">Alkistis</div>
@@ -188,7 +215,7 @@
         <h2>📅 Schedule</h2>
         <ul>
             <li onclick="toggleSubItems(this)">
-                <strong>August 21, 2024:</strong> Arrival
+                <strong>August 21, 2024:</strong> Arrival <a class="arrow"> ></a>
                 <ul class="sub-items">
                     <li>[👩‍🔬🧚‍♀️🚗] Leave 7:20am - Arrive 9:10am <a href="https://goldenstarferries.gr/wp-content/uploads/%CE%91%CE%BD%CF%84%CE%AF%CE%B3%CF%81%CE%B1%CF%86%CE%BF-%CF%84%CE%BF%CF%85-superexpress-2024-seasonF.pdf" target="_blank" class="clickable-text">GOLDEN STAR</a></li>
                     <li>[👩‍💻] Leave 9:30am - Arrive 12:25am <a href="https://tickets.seajets.com/trips.php?1/1/0/0/0/N/PIR/TIN/2024-08-21" target="_blank" class="clickable-text">SEAJETS</a></li>
@@ -196,7 +223,7 @@
                 </ul>
             </li>
             <li onclick="toggleSubItems(this)">
-                <strong>August 25, 2024:</strong> Departure
+                <strong>August 25, 2024:</strong> Departure <a class="arrow"> ></a>
                 <ul class="sub-items">
                     <li>[👩‍🔬🧚‍♀️🚗] Leave 5pm - Arrive 9pm <a href="https://booking.fastferries.com.gr/?port_from=TIN&port_to=RAF&start_date=25%2F08%2F2024&end_date=&passengers=1&vechicles=0" target="_blank" class="clickable-text">FAST FERRIES</a></li>
                     <li> Check-out by 11am</li>
@@ -206,8 +233,10 @@
     </div>
     <div id="accomodation" class="accomodation">
         <h2>🏠 Airbnb</h2>
-        <img src="images/airbnb.jpg" alt="Airbnb Accommodation">
-        <a href="https://www.airbnb.gr/rooms/1125805687408496592?viralityEntryPoint=1&s=76&source_impression_id=p3_1724060343_P3ncG8KGoDE1AfII&enable_auto_translate=false" target="_blank">Details</a>
+        <a href="https://www.airbnb.gr/rooms/1125805687408496592?viralityEntryPoint=1&s=76&source_impression_id=p3_1724060343_P3ncG8KGoDE1AfII&enable_auto_translate=false" target="_blank" class="clickable-image">
+            <img src="images/airbnb.jpg" alt="Airbnb Accommodation">
+            <div class="image-text">Le Villa</div>
+        </a>
     </div>
     <div id="finances" class="finances">
         <h2>💰 Trip Expenses</h2>
@@ -231,7 +260,7 @@
     </div>
     <div id="photos" class="photos">
         <h2>📸 Photo Gallery</h2>
-        <p><a href="https://drive.google.com/drive/folders/your-photo-drive-link" target="_blank">View Photos</a></p>
+        <p><a href="https://drive.google.com/drive/folders/1Pu2rNmAiXqqxhm0Z6HKOhNqhvC2gSdRI" target="_blank">View Photos</a></p>
     </div>
     <script>
         function toggleSubItems(element) {
